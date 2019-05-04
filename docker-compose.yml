@@ -8,6 +8,7 @@ services:
         - "7000:7000"
         - "7001:7001/udp"
         - "7500:7500"
+        - "20000-20020:2000-2020"
       volumes:
         - ./conf/frps.ini:/etc/frps.ini:ro
         - ./log/frps/:/var/log/frps/:rw
