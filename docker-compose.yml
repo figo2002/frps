@@ -1,1 +1,14 @@
-
+version: "3"
+services:
+    frps:
+      build: .
+      container_name: frps
+      ports: 
+        - "7400:7400"
+        - "7401:7401"
+        - "7402:7402"
+        - "7403:80"
+        - "7404:443"
+      volumes:
+        - ./conf/frps.ini:/etc/frps.ini:ro
+        - ./log/frps/:/var/log/frps/:rw
