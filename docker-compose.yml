@@ -6,6 +6,7 @@ services:
       restart: always
       ports: 
         - "7000:7000"
+        - "7001:7001"
         - "7500:7500"
       volumes:
         - ./conf/frps.ini:/etc/frps.ini:ro
